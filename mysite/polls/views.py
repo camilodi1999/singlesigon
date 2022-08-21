@@ -12,7 +12,7 @@ def index(request):
     context = {
         'polls': []
     }
-    polls = models.Poll.objects.all()
+    polls = models.Poll.objects.prefetch_related('answers__poll','answers__user')
     for poll in polls:
         item = {
             "title": poll.title,

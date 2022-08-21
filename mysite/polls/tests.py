@@ -111,7 +111,7 @@ class TestIndexView(BaseTestCase):
 
 
 class TestPerformance(BaseTestCase):
-    ANSWER_COUNT = 100000
+    ANSWER_COUNT = 5
 
     def setUp(self):
         super().setUp()
